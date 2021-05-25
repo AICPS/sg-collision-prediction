@@ -1,0 +1,17 @@
+*wandb*
+*.0
+*.json
+*.wandb
+*.txt
+*.log
+*.pyc
+*.pkl
+*.tsv
+*.csv
+*.pt
+*.png
+*.jpg
+*.project
+*.pydevproject
+*.settings\*
+*.prefs
