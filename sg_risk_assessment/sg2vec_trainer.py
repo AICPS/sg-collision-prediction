@@ -103,9 +103,12 @@ def build_scenegraph_dataset(cache_path, train_to_test_ratio=0.3, downsample=Fal
     y_0 = [0]*len(class_0)
     y_1 = [1]*len(class_1)
     min_number = min(len(class_0), len(class_1))
-    
+
     # dataset class distribution
-    modified_class_0, modified_y_0 = resample(class_0, y_0, n_samples=min_number) if downsample else class_0, y_0
+    if downsample:
+        modified_class_0, modified_y_0 = resample(class_0, y_0, n_samples=min_number)
+    else:
+         modified_class_0, modified_y_0 = class_0, y_0
     train, test, _, _ = train_test_split(modified_class_0+class_1, modified_y_0+y_1, test_size=train_to_test_ratio, shuffle=True, stratify=modified_y_0+y_1, random_state=seed)
     
     # transfer learning
@@ -114,7 +117,7 @@ def build_scenegraph_dataset(cache_path, train_to_test_ratio=0.3, downsample=Fal
         test, _ = pkl.load(open(transfer_path, "rb"))
 
     return train, test, feature_list
-
+    
 
 class SG2VECTrainer:
 

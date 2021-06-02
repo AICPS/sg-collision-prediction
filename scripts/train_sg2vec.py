@@ -4,7 +4,7 @@ from sg_risk_assessment.sg2vec_trainer import SG2VECTrainer
 import pandas as pd
 
 
-def train_dynamic_kg(args, iterations=1):
+def train_sg2vec_model(args, iterations=1):
     ''' Training the dynamic kg algorithm with different attention layer choice.'''
     
     outputs = []
@@ -39,4 +39,4 @@ def train_dynamic_kg(args, iterations=1):
 
 if __name__ == "__main__":
     # the entry of dynkg pipeline training
-    train_dynamic_kg(sys.argv[1:])
+    train_sg2vec_model(sys.argv[1:])

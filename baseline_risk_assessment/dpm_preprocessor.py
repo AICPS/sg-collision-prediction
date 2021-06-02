@@ -94,7 +94,7 @@ class DPMPreprocessor():
             new_sequences.append((subseqs, labels, PurePath(path).name))
 
         with open(self.cache_path, 'wb') as f:
-            pkl.dump(new_sequences, f)
+            pkl.dump(new_sequences, f, fix_imports=False)
     
 
     #generates a list of subsequences of length subseq_len from a top level sequence.

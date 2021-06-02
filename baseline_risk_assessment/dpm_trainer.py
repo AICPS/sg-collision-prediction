@@ -79,7 +79,6 @@ class DPMTrainer:
         
         with open(self.config.cache_path, 'rb') as f:
             self.dataset = pkl.load(f)
-            pdb.set_trace()
 
         if self.config.transfer_path != None and self.config.transfer_path.exists():
             with open(self.config.transfer_path, 'rb') as f:
@@ -122,6 +121,12 @@ class DPMTrainer:
 
         return balanced
 
+    def get_fileid(self, fname):
+        try: 
+            return int(fname)
+        except:
+            return int(fname.split('_')[0])
+
     def split_dataset(self):
         training_data, testing_data = train_test_split(self.dataset, test_size=self.config.split_ratio, shuffle=True, random_state=self.config.seed, stratify=None)
         self.dataset = None #clearing to save memory
@@ -140,8 +145,8 @@ class DPMTrainer:
             print("Number of Training Sequences Included: ", len(self.training_x))
             print("Number of Testing Sequences Included: ", len(self.testing_x))
 
-        self.training_filenames = np.concatenate([np.full(y.shape[0], int(fname)) for y,fname in zip(self.training_y, self.training_filenames)])
-        self.testing_filenames  = np.concatenate([np.full(y.shape[0], int(fname)) for y,fname in zip(self.testing_y, self.testing_filenames)])
+        self.training_filenames = np.concatenate([np.full(y.shape[0], self.get_fileid(fname)) for y,fname in zip(self.training_y, self.training_filenames)])
+        self.testing_filenames  = np.concatenate([np.full(y.shape[0], self.get_fileid(fname)) for y,fname in zip(self.testing_y, self.testing_filenames)])
         self.training_x = np.concatenate(self.training_x)
         self.testing_x  = np.concatenate(self.testing_x)
         self.training_x = np.expand_dims(self.training_x, axis=-3) # color channels = 1
