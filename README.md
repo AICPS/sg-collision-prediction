@@ -1,8 +1,8 @@
 # Spatio-Temporal Scene-Graph Embedding for Autonomous Vehicle Collision Prediction
 
-This repository includes the code and dataset information required for reproducing the results in our paper, *Spatio-Temporal Scene-Graph Embedding for Autonomous Vehicle Collision Prediction*. Furthermore, we also integrated the source code of [our baseline method](https://arxiv.org/abs/1711.10453), into this repo. The baseline approach infers the likelihood of a future collision using deep ConvLSTMs. Our approach incoporates both spatial modeling and temporal modeling in the task of collision predition using MRGCN.
+This repository includes the code and dataset information required for reproducing the results in our paper, *Spatio-Temporal Scene-Graph Embedding for Autonomous Vehicle Collision Prediction*. Furthermore, we also integrated the source code of [the baseline method](https://arxiv.org/abs/1711.10453) we compared against into this repo. The baseline approach infers the likelihood of a future collision using deep ConvLSTMs. Our approach incoporates both spatial modeling and temporal modeling in the task of collision prediction using an MR-GCN and an LSTM.
 
-For fabricating the lane-changing datasets, we use Carla [CARLA](https://github.com/carla-simulator/carla) 0.9.8 which is an open-source autonomous car driving simulator. We also utilized the [scenario_runner](https://github.com/carla-simulator/scenario_runner) which was designed for CARLA challenge event. For real-driving datasets, we used Honda-Driving Dataset (HDD) in our experiments. 
+For fabricating the lane-changing datasets, we use [CARLA](https://github.com/carla-simulator/carla) 0.9.8 which is an open-source autonomous car driving simulator. We also utilized the [scenario_runner](https://github.com/carla-simulator/scenario_runner) which was designed for the CARLA challenge event. For real-driving datasets, we used the Honda-Driving Dataset (HDD) in our experiments. 
 
 The scene-graph dataset used in our paper is published [here](http://ieee-dataport.org/3618).
 
@@ -16,7 +16,7 @@ The architecture of this repository is as below:
 We recommend our potential users to use [Anaconda](https://www.anaconda.com/) as the primary virtual environment. The requirements to run through our repo are as follows,
 - python >= 3.6 
 - torch == 1.6.0
-- torch_teometric == 1.6.1
+- torch_geometric == 1.6.1
 
 First, download and install Anaconda here:
 https://www.anaconda.com/products/individual
