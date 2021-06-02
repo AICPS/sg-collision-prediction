@@ -1,8 +1,6 @@
 import sys, os
-#import check_gpu as cg
-#os.environ['CUDA_VISIBLE_DEVICES'] = cg.get_free_gpu()
 sys.path.append(os.path.dirname(sys.path[0]))
-from core.dynkg_trainer import DynKGTrainer
+from sg_risk_assessment.dynkg_trainer import DynKGTrainer
 import pandas as pd
 
 

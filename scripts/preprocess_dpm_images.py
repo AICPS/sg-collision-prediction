@@ -1,6 +1,6 @@
 import os, sys, pdb
 sys.path.append(os.path.dirname(sys.path[0]))
-from DPM.dpm_preprocessor import DPMPreprocessor
+from baseline_risk_assessment.dpm_preprocessor import DPMPreprocessor
 from argparse import ArgumentParser
 from pathlib import Path
 

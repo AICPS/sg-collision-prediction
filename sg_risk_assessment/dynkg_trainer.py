@@ -9,11 +9,11 @@ from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precisio
 from sklearn import preprocessing
 from matplotlib import pyplot as plt
 
-from core.relation_extractor import Relations
+from sg_risk_assessment.relation_extractor import Relations
 from argparse import ArgumentParser
 from pathlib import Path
 from tqdm import tqdm
-from core.mrgcn import *
+from sg_risk_assessment.mrgcn import *
 from torch_geometric.data import Data, DataLoader, DataListLoader
 from sklearn.utils.class_weight import compute_class_weight
 import warnings
@@ -21,7 +21,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 from sklearn.utils import resample
 import pickle as pkl
 from sklearn.model_selection import train_test_split, StratifiedKFold
-from core.metrics import *
+from sg_risk_assessment.metrics import *
 
 from collections import Counter
 import wandb
