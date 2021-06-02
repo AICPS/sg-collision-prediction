@@ -15,7 +15,7 @@ from tqdm import tqdm
 from sklearn.utils import resample
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.utils.class_weight import compute_class_weight
-from core.metrics import *
+from sg_risk_assessment.metrics import *
 
 INPUT_SHAPE = (1, 1, 5, 1, 64, 64) # (num_camera, batch_size, frames, channels, height, width)
 

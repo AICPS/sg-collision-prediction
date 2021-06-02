@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append(os.path.dirname(sys.path[0]))
-from sg_risk_assessment.dynkg_trainer import DynKGTrainer
+from sg_risk_assessment.sg2vec_trainer import SG2VECTrainer
 import pandas as pd
 
 
@@ -12,7 +12,7 @@ def train_dynamic_kg(args, iterations=1):
     metrics = []
 
     for i in range(iterations):
-        trainer = DynKGTrainer(args)
+        trainer = SG2VECTrainer(args)
         trainer.split_dataset()
         trainer.build_model()
         trainer.learn()

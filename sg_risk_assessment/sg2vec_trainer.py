@@ -116,7 +116,7 @@ def build_scenegraph_dataset(cache_path, train_to_test_ratio=0.3, downsample=Fal
     return train, test, feature_list
 
 
-class DynKGTrainer:
+class SG2VECTrainer:
 
     def __init__(self, args):
         self.config = Config(args)
