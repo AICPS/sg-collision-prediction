@@ -4,9 +4,8 @@ This repository includes the code and dataset information required for reproduci
 
 For fabricating the lane-changing datasets, we use [CARLA](https://github.com/carla-simulator/carla) 0.9.8 which is an open-source autonomous car driving simulator. We also utilized the [scenario_runner](https://github.com/carla-simulator/scenario_runner) which was designed for the CARLA challenge event. For real-driving datasets, we used the Honda-Driving Dataset (HDD) in our experiments. 
 
-The scene-graph dataset used in our paper is published [here](http://ieee-dataport.org/3618). 
-
-The corresponding datasets for the baseline model can be found [here](https://drive.google.com/file/d/1YfU_DVdYNVNYhoiuqlYZRUWRbHLZCE7l/view?usp=sharing) 
+The scene-graph dataset used in our paper is published [here](http://ieee-dataport.org/3618). \
+The corresponding datasets for the baseline model can be found [here](https://drive.google.com/file/d/1YfU_DVdYNVNYhoiuqlYZRUWRbHLZCE7l/view?usp=sharing). 
 
 The architecture of this repository is as below:
 - **sg-risk-assessment/**: this folder consists of all the related source files used for our scene-graph based approach (SG2VEC). 
