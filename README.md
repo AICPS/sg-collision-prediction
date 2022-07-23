@@ -54,17 +54,17 @@ pip install -r requirements.txt
 # Usages
 For running the sg-collision-prediction in this repo, you may refer to the following commands:
 ```shell
-$ python train_sg2vec.py --pkl_path risk-assessment/scenegraph/synthetic/271_dataset.pkl
+$ python train_sg2vec.py --cache_path risk-assessment/scenegraph/synthetic/271_dataset.pkl
 
-# --pkl_path + [wherever path that stores the downloaded pkl]
+# --cache_path + [wherever path that stores the downloaded pkl]
 # For tuning hyperparameters view the config class of sg2vec_trainer.py
 ```
 
 For running the baseline-risk-assessment in this repo, you may refer to the following commands:
 ```shell
-$ python train_dpm.py --load_pkl True --pkl_path risk-assessment/scene/synthetic/271_dataset.pkl
+$ python train_dpm.py --cache_path risk-assessment/scene/synthetic/271_dataset.pkl
 
-# --pkl_path + [wherever path that stores the downloaded pkl]
+# --cache_path + [wherever path that stores the downloaded pkl]
 # For tuning hyperparameters view the config class of dpm_trainer.py
 ```
 
